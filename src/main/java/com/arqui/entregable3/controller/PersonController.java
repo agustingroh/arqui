@@ -1,8 +1,7 @@
 package com.arqui.entregable3.controller;
 
-import com.arqui.entregable3.dto.PersonDTO;
-import com.arqui.entregable3.entity.Person;
-import com.arqui.entregable3.service.PersonService;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,14 +12,14 @@ import java.util.Objects;
 @RequestMapping("/person")
 public class PersonController {
 
-    private PersonService personService;
+  //  private PersonService personService;
 
-    @Autowired
+ /*   @Autowired
     public PersonController(PersonService personService){
         this.personService = personService;
-    }
+    }*/
 
-    @RequestMapping(method = RequestMethod.GET, produces = "application/json")
+  /*  @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public List<Person> findAll(){
         System.out.println(personService.findAll());
         return personService.findAll();
@@ -50,5 +49,5 @@ public class PersonController {
 
 
 
-
+*/
 }
