@@ -10,6 +10,7 @@ import com.arqui.entregable3.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -52,7 +53,8 @@ public class PersonCareerService {
 
     public List<CareerReportDTO> getReport(){
         List<Object[]> careerReports = this.personCareerRepository.getReport();
-        return careerReports.stream().map(r-> new CareerReportDTO((Integer)r[0],(String) r[1],((BigInteger)r[2]).intValue(),((Double) r[3]).intValue(),((Double) r[4]).intValue())).collect(Collectors.toList());
+        System.out.println(careerReports);
+        return careerReports.stream().map(r-> new CareerReportDTO((Integer)r[0],(String) r[1],((BigDecimal)r[2]).intValue(),((BigDecimal) r[3]).intValue(),((BigDecimal) r[4]).intValue())).collect(Collectors.toList());
     }
 
     public List<PersonDTO> findAllStudentsByCareerAndCity(int careerId, String city){
