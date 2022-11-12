@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface CareerRepository extends JpaRepository<Career, Integer> {
-    @Query("SELECT DISTINCT c FROM Career c JOIN c.students s WHERE size(s) > 0 ORDER BY size(s) DESC")
+    @Query("SELECT DISTINCT c FROM Career c JOIN c.students s WHERE s.size > 0 ORDER BY s.size DESC")
     List<Career> getAllCareersWithStudents();
 }
