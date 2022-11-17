@@ -30,7 +30,7 @@ public class CareerController {
     @RequestMapping(value = "/inscriptions",method = RequestMethod.GET, produces = "application/json")
     @Operation(
             summary = "Devuelve carreras que tienen estudiantes",
-            description = "Devuelve carreras que tengan estudiantes, en caso deno tener las descarta.",
+            description = "Devuelve carreras que tengan estudiantes, en caso de no tener,las descarta.",
             tags = { "Career-controller" },
             responses = {
                     @ApiResponse(
