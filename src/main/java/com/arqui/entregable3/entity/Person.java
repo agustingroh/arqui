@@ -15,21 +15,21 @@ import java.util.List;
 public class Person {
     @Id
     @Column(name = "dni")
-    public Integer dni;
+    private Integer dni;
 
     @Column(name = "name")
-    public String name;
+    private String name;
 
-    public String surname;
+    private String surname;
 
-    public String gender;
+    private String gender;
 
-    public String city;
+    private String city;
 
-    public int age;
+    private int age;
 
     @Column(name="college_notebook")
-    public int collegeNotebook;
+    private int collegeNotebook;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "student", cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
